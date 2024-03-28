@@ -1,10 +1,4 @@
-import {
-	Pressable,
-	PressableProps,
-	StyleSheet,
-	Text,
-	View,
-} from 'react-native';
+import { Pressable, PressableProps, StyleSheet, Text, View } from 'react-native';
 import { token } from '../../token';
 
 export default function Button({
@@ -13,7 +7,7 @@ export default function Button({
 	...props
 }: PressableProps & { text: string; kind: 'primary' | 'secondary' }) {
 	return (
-		<Pressable>
+		<Pressable {...props}>
 			<View style={[styles.button, kind === 'primary' && styles.primary]}>
 				<Text style={styles.buttonText}>{text}</Text>
 			</View>
@@ -32,6 +26,7 @@ const styles = StyleSheet.create({
 	},
 	buttonText: {
 		fontSize: token.fontSizes.button,
+		fontFamily: 'Sora-Bold' /* Fonts connect in prebuild */,
 	},
 	primary: { backgroundColor: token.Colors.brightOrange },
 });
