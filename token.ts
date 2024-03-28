@@ -1,6 +1,7 @@
 export const token = {
 	Colors: {
 		brightOrange: '#FFA200',
+		baseWhite: '#FFFF',
 	},
 
 	fontSizes: {

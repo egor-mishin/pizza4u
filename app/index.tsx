@@ -6,7 +6,7 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<Text>Hello world</Text>
-			<Button text='Add to cart' kind='primary' />
+			<Button text="Add to cart" kind="primary" />
 		</View>
 	);
 }
@@ -14,7 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#fff',
+		backgroundColor: token.Colors.baseWhite,
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
