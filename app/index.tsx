@@ -8,7 +8,7 @@ export default function App() {
 		<View style={styles.container}>
 			<Text>Hello world</Text>
 			<Button text="Add to cart" kind="primary" />
-			<Link href={'/restore'}>
+			<Link href={'/restor'}>
 				<Text>Restore the password</Text>
 			</Link>
 		</View>
