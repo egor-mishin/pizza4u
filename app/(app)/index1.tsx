@@ -1,16 +1,10 @@
-import { Link } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
-import Button from '../shared/Button/Button';
-import { token } from '../token';
+import { token } from '../../token';
 
-export default function LoginScreen() {
+export default function MenuScreen() {
 	return (
 		<View style={styles.container}>
 			<Text>Hello world</Text>
-			<Button text="Add to cart" kind="primary" />
-			<Link href={'/restore'}>
-				<Text>Restore the password</Text>
-			</Link>
 		</View>
 	);
 }
