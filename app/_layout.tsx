@@ -1,6 +1,9 @@
-import { Stack } from 'expo-router';
+import { useFonts } from 'expo-font';
+import { SplashScreen, Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { useCallback } from 'react';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+
 
 export default function RootLayout() {
 	<StatusBar style="dark" />;
@@ -15,7 +18,7 @@ export default function RootLayout() {
 					},
 				}}
 			>
-				<Stack.Screen name="login" />
+				<Stack.Screen name="index" />
 				<Stack.Screen
 					name="restore"
 					options={{

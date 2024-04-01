@@ -1,3 +1,4 @@
+import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
@@ -7,6 +8,7 @@ import FavIcon from '../../assets/icons/Fav.icon';
 import Logo from '../../assets/icons/Logo.icon';
 
 export default function AppLayout() {
+
 	<StatusBar style="dark" />;
 	const insets = useSafeAreaInsets();
 	return (

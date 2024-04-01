@@ -1,6 +1,7 @@
 export const token = {
 	Colors: {
 		brightOrange: '#FFA200',
+		brightOrangeHover: '#D58904',
 		baseWhite: '#FFFF',
 	},
 
