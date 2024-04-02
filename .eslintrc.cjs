@@ -1,11 +1,26 @@
 module.exports = {
-  plugins: ["prettier", "react", "react-native"],
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-native/all",
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ["eslint:recommended"],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: [".eslintrc.{js,cjs}"],
+      parserOptions: {
+        sourceType: "script",
+      },
+    },
   ],
   parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  plugins: ["prettier", "react-native"],
   rules: {
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
@@ -13,6 +28,9 @@ module.exports = {
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 2,
     "react-native/no-single-element-style-arrays": 2,
+    "react-hooks/exhaustive-deps": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
     "prettier/prettier": [
       "error",
       {
