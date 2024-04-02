@@ -1,18 +1,13 @@
 import React, { FC, useState } from 'react';
-import {
-	Pressable,
-	StyleSheet,
-	TextInput,
-	TextInputProps,
-	View,
-} from 'react-native';
+import { Pressable, StyleSheet, TextInput, TextInputProps, View } from 'react-native';
 import EyeClosed from '../../assets/icons/Eye-closed';
 import EyeOpened from '../../assets/icons/Eye-opened';
 import { token } from '../../token';
 
-export const Input: FC<
-	TextInputProps & { kind?: 'password' | 'text'; placeholder: string }
-> = ({ kind = 'text', placeholder }): JSX.Element => {
+export const Input: FC<TextInputProps & { kind?: 'password' | 'text'; placeholder: string }> = ({
+	kind = 'text',
+	placeholder,
+}): JSX.Element => {
 	const [isPasswordSecured, setIsPasswordSecured] = useState(false);
 	return (
 		<View style={styles.inputBox}>
@@ -27,13 +22,7 @@ export const Input: FC<
 					setIsPasswordSecured(!isPasswordSecured);
 				}}
 			>
-				{kind === 'password' ? (
-					isPasswordSecured ? (
-						<EyeClosed />
-					) : (
-						<EyeOpened />
-					)
-				) : null}
+				{kind === 'password' ? isPasswordSecured ? <EyeClosed /> : <EyeOpened /> : null}
 			</Pressable>
 		</View>
 	);
