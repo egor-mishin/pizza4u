@@ -1,14 +1,17 @@
 import { Link } from 'expo-router';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { useUserStore } from '../entities/user/model/user.model';
 import Button from '../shared/Button/Button';
 import { ErrorNotification } from '../shared/ErrorNotification/ErrorNotification';
 import { Input } from '../shared/Input/Input';
 import { token } from '../token';
 
 export default function LoginScreen() {
+	const user = useUserStore((state) => state.profile);
 	return (
 		<>
 			<View style={styles.container}>
+				<Text>{user?.login}</Text>
 				<ErrorNotification error="Incorrect password" />
 				<Image
 					source={require('../assets/images/chef.png')}
