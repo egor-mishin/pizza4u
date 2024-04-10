@@ -1,20 +1,8 @@
-import { router, useRootNavigationState } from 'expo-router';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { useAuthStore } from '../../entities/auth/model/auth.state';
 import { token } from '../../token';
 
 export default function MenuScreen() {
-	const { access_token } = useAuthStore();
-	const state = useRootNavigationState();
-
-	useEffect(() => {
-		if (!state.key) return;
-		if (!access_token) {
-			router.replace('/login');
-		}
-	}, [access_token, state]);
-
 	return (
 		<View style={styles.container}>
 			<Text>Hello world</Text>
