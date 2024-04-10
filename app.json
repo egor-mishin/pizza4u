@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "pizza4u",
+    "name": "pizza4u-v2",
     "scheme": "pizza4u-scheme",
-    "slug": "pizza4u",
+    "slug": "pizza4u-v2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,32 +20,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.egor_mishin.pizza4u"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "4eeb538b-69de-4a9e-a76f-1eae8fbff3f8"
-      }
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-font",
-        {
-          "fonts": [
-            "./assets/fonts/Sora-Bold.ttf",
-            "./assets/fonts/Sora-Regular.ttf",
-            "./assets/fonts/Sora-SemiBold.ttf"
-          ]
-        }
-      ]
-    ]
+    "plugins": ["expo-router"]
   }
 }

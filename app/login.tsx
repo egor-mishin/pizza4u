@@ -1,9 +1,10 @@
 import { Link } from 'expo-router';
+import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { useUserStore } from '../entities/user/model/user.model';
-import Button from '../shared/Button/Button';
-import { ErrorNotification } from '../shared/ErrorNotification/ErrorNotification';
-import { Input } from '../shared/Input/Input';
+import Button from '../shared/ui/Button/Button';
+import { ErrorNotification } from '../shared/ui/ErrorNotification/ErrorNotification';
+import { Input } from '../shared/ui/Input/Input';
 import { token } from '../token';
 
 export default function LoginScreen() {
