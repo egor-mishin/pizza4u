@@ -1,14 +1,14 @@
 import { Link } from 'expo-router';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { useUserStore } from '../entities/user/model/user.model';
+import { IUserState, useUserStore } from '../entities/user/model/user.model';
 import Button from '../shared/ui/Button/Button';
 import { ErrorNotification } from '../shared/ui/ErrorNotification/ErrorNotification';
 import { Input } from '../shared/ui/Input/Input';
 import { token } from '../token';
 
 export default function LoginScreen() {
-	const user = useUserStore((state) => state.profile);
+	const user = useUserStore((state: IUserState) => state.profile);
 	return (
 		<>
 			<View style={styles.container}>
