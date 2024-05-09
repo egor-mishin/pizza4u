@@ -1,20 +1,22 @@
 import React, { FC, useState } from 'react';
 import { Pressable, StyleSheet, TextInput, TextInputProps, View } from 'react-native';
-import EyeClosed from '../../../assets/icons/Eye-closed';
-import EyeOpened from '../../../assets/icons/Eye-opened';
+import EyeClosed from '../../../assets/icons/Eye-closed.icon';
+import EyeOpened from '../../../assets/icons/Eye-opened.icon';
 import { token } from '../../../token';
 
 export const Input: FC<TextInputProps & { kind?: 'password' | 'text'; placeholder: string }> = ({
 	kind = 'text',
 	placeholder,
+	...props
 }): JSX.Element => {
-	const [isPasswordSecured, setIsPasswordSecured] = useState(false);
+	const [isPasswordSecured, setIsPasswordSecured] = useState(true);
 	return (
 		<View style={styles.inputBox}>
 			<TextInput
 				style={styles.input}
-				secureTextEntry={kind === 'password' && isPasswordSecured}
+				secureTextEntry={kind === "password" && isPasswordSecured}
 				placeholder={placeholder}
+				{...props}
 			/>
 			<Pressable
 				style={styles.iconBox}
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
 		borderRadius: token.inputStyles.radius,
 		paddingHorizontal: token.inputStyles.horizontalPadding,
 		paddingVertical: token.inputStyles.verticalPadding,
-		backgroundColor: token.Colors.baseGray,
+		backgroundColor: token.Colors.lightGray,
 		fontSize: token.fontSizes.input,
 	},
 

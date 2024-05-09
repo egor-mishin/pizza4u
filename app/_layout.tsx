@@ -11,16 +11,17 @@ export default function RootLayout() {
 			<Stack
 				screenOptions={{
 					headerShown: false,
-					contentStyle: {
-						paddingTop: insets.top,
-					},
 				}}
 			>
-				<Stack.Screen name="index" />
+				<Stack.Screen name="login" />
 				<Stack.Screen
 					name="restore"
 					options={{
 						title: 'Restore the password',
+						presentation: 'modal',
+						contentStyle:{
+							paddingTop: insets.top,
+						}
 					}}
 				/>
 			</Stack>

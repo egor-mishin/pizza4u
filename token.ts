@@ -1,9 +1,12 @@
 export const token = {
 	Colors: {
 		brightOrange: '#FFA200',
+		darkOrange: '#CC8201',
 		brightOrangeHover: '#D58904',
 		baseWhite: '#FFFF',
-		baseGray: '#EAE6DF',
+		baseGray: '#5A5F77',
+		lightGray: '#DFDFDF',
+		baseBronze: '#EAE6DF',
 		borderGray: '#DFDFDF',
 		baseRed: '#CC384E',
 	},
@@ -14,6 +17,16 @@ export const token = {
 		linkRestore: 18,
 		error: 18,
 	},
+	
+	Fonts: {
+		f18: 18,
+		f20: 20,
+		f22: 22,
+		fontFamily: 'Sora Sans',
+
+
+	},
+
 
 	buttonStyles: {
 		pt: 20,

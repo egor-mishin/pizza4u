@@ -1,12 +1,13 @@
 import React from 'react';
-import { Animated, Pressable, PressableProps, StyleSheet, Text } from 'react-native';
+import { ActivityIndicator, Animated, Pressable, PressableProps, StyleSheet, Text } from 'react-native';
 import { token } from '../../../token';
 
 export default function Button({
 	text,
 	kind = 'primary',
+	isLoading,
 	...props
-}: PressableProps & { text: string; kind: 'primary' | 'secondary' }) {
+}: PressableProps & { text: string; kind: 'primary' | 'secondary', isLoading?: boolean; }) {
 	const animatedValue = new Animated.Value(100);
 	const color = animatedValue.interpolate({
 		inputRange: [0, 100],
@@ -34,7 +35,8 @@ export default function Button({
 			<Animated.View
 				style={[{ ...styles.button }, kind === 'primary' && { backgroundColor: color }]}
 			>
-				<Text style={styles.buttonText}>{text}</Text>
+				{!isLoading && <Text style={styles.buttonText}>{text}</Text>}
+				{isLoading && <ActivityIndicator size='large' color={token.Colors.baseWhite}/>}
 			</Animated.View>
 		</Pressable>
 	);
