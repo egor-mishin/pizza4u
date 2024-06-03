@@ -1,13 +1,20 @@
+import { Stack } from 'expo-router';
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { token } from '../../../token';
 
-export default function CartScreen() {
-	
+export default function OrdersScreen() {
 	return (
-		<View style={styles.container}>
-			<Text>Favorites</Text>
-		</View>
+		<>
+			<Stack.Screen
+				options={{
+					title: 'My orders',
+				}}
+			/>
+			<View style={styles.container}>
+				<Text>My Orders</Text>
+			</View>
+		</>
 	);
 }
 

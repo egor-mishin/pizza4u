@@ -1,13 +1,20 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { token } from '../../../token';
+import { Stack } from 'expo-router';
 
 export default function MenuScreen() {
-	
 	return (
-		<View style={styles.container}>
-			<Text>Menu</Text>
-		</View>
+		<>
+			<Stack.Screen
+				options={{
+					title: 'Menu',
+				}}
+			/>
+			<View style={styles.container}>
+				<Text>Menu</Text>
+			</View>
+		</>
 	);
 }
 
